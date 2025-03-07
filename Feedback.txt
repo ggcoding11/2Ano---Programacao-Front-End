@@ -1,0 +1,4 @@
+1) O alt funciona para carregar algo se uma imagem não carregar, seria legal colocar
+2) Evite usar o !important no CSS
+3) Ao invés de fixar um tamanho específico para a imagem, use coisas como o object-fit
+para preencher
