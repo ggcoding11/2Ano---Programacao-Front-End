@@ -5,6 +5,10 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    text-decoration: none; 
+    /* O text decoration foi usado para tirar o sublinhado da tag a */
+    list-style: none;
+    /* Para eliminar os pontinhos das listas */
 }
 
 
@@ -12,6 +16,8 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
+
+/* Estabeleci algumas variáveis globais no CSS */
 :root{
    --verde-escuro: #14424b;
    --verde: #2f9364;
@@ -19,4 +25,60 @@ body{
    --degrade-btn: linear-gradient(#fe9611, #ff5c00);
    --color-p: #a1a1a1;
    --color-p-2: #868585;
+}
+
+.background-verde{
+    background-color: var(--verde-escuro);
+}
+
+/* Classes reutilizaveis */
+.container{
+    max-width: 1440px;
+    padding: 0 5%; 
+    /* O padding aqui foi usado para não encostar muito nas bordas */
+    margin: 0 auto;
+    
+    /* O padding foi usado para dar espaçamento apenas no eixo horizontal */
+    
+    /* O auto significa que tudo será igualado! */
+
+    /* Se por um acaso eu tentasse fazer o mesmo efeito q fiz o padding com o margin, não ficaria simetrico em telas maiores! */
+}
+
+.btn-gradient{
+    padding: 10px 25px;
+    color: white;
+    border: none;
+    /* Remove as bordas padrões do navegador */
+    cursor: pointer;
+    /* Faz com que o mouse fique com a mãozinha ao passar por cima */
+    background: var(--degrade-btn);
+}
+
+nav{
+    display: flex;
+    /* O flex foi usado aqui para dar mais possibilidades de organização dos elementos */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo a{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.ul{
+    display: flex;
+    align-items: center;
+}
+
+.ul li{
+    margin: 0 35px;
+    font-size: 15px;
+}
+
+.ul li a{
+    color: white;
 }
