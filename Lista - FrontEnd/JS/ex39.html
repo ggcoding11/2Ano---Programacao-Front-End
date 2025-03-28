@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício 39</h1>
+
+    <div>
+        <label for="idade">Insira a idade: </label>
+        <input type="number" name="" id="idade">
+        <button id="botao">Enviar</button>
+    </div>
+
+    <script>
+        let botao = document.getElementById("botao")
+
+        botao.addEventListener("click", ()=>{
+            let idade = document.getElementById("idade")
+
+            if (Number(idade.value) >= 18){
+                document.write("Maior de idade")
+            } else {
+                document.write("Menor de idade")
+            }
+        })
+    </script>
+</body>
+</html>
