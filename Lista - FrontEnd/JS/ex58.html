@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 58</title>
+</head>
+<body>
+    <div id="texto">Achou!!!</div>
+    <button id="botao">Esconde/Acha</button>
+
+    <script>
+        let escondeu = false
+
+        document.getElementById("botao").addEventListener("click", () =>{
+            let texto = document.getElementById("texto")
+            
+            if (escondeu == false){
+                texto.innerHTML = ""
+                escondeu = true
+            } else {
+                texto.innerHTML = "Achou!!"
+                escondeu = false
+            }
+        })
+    </script>
+</body>
+</html>

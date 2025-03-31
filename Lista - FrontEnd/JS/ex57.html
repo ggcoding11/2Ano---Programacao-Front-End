@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 57</title>
+</head>
+<body>
+    <span>0</span>
+
+    <button>Clique aqui</button>
+
+    <script>
+        document.getElementsByTagName("button")[0].addEventListener("click", () =>{
+            let contador = Number(document.getElementsByTagName("span")[0].innerText)
+            contador++
+
+            document.getElementsByTagName("span")[0].innerText = contador
+        })
+    </script>
+</body>
+</html>
