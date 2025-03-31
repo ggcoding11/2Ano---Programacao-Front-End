@@ -1,1 +1,0 @@
-console.log("Meu primeiro script em JS")
