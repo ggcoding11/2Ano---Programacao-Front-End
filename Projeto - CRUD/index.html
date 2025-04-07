@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Projeto - CRUD</title>
+
+    <style>
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin-bottom: 20px;
+        }
+
+        select {
+            margin-bottom: 20px;
+        }
+
+        h3{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Sistema com Crud</h1>
+
+        <h3>Cadastro</h3>
+
+        <form>
+            <label>Nome</label>
+            <input type="text" id="pessoa" class="form-control" placeholder="Digite um nome">
+
+            <label>Idade</label>
+            <input type="number" name="" id="idade" class="form-control" placeholder="Digite a idade">
+
+            <label>Sexo</label>
+            <select class="form-select" id="sexo">
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+            </select>
+
+            <button id="enviar" type="button" class="btn btn-primary">Enviar</button>
+
+            <hr>
+
+            <h3>Remover cadastro</h3>
+
+            <label>Index do vetor</label>
+            <input type="number" name="" id="index" class="form-control" placeholder="Digite para remover">
+
+            <button id="remove" type="button" class="btn btn-primary">Remover</button>
+
+            <hr>
+
+            <h3>Mostrar Cadastro</h3>
+
+            <label>Index para mostrar</label>
+            <input type="number" name="" id="indexMostrado" class="form-control" placeholder="Digite o índex para mostrar os dados">
+            <button type="button" id="mostrar" class="btn btn-primary">Mostrar</button>
+        
+            <div id="nomeMostrado"></div>
+            <div id="idadeMostrada"></div>
+            <div id="sexoMostrado"></div>
+
+            <hr>
+
+            <h3>Pesquisar Cadastro pelo Nome</h3>
+
+            <label>Nome para mostrar os dados</label>
+            <input type="text" id="nomePesquisa" class="form-control" placeholder="Digite o nome para mostrar os dados">
+            <button type="button" id="mostrarPeloNome" class="btn btn-primary">Mostrar</button>
+        
+            <div id="resultado"></div>
+
+            <hr>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
