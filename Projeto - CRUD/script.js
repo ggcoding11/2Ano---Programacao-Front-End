@@ -50,27 +50,32 @@ mostrarPeloNome.addEventListener("click", ()=>{
 
     let resultado = document.getElementById("resultado")
 
-    let contador = 0
+    //Convertendo tudo para maiusculo
 
-    pessoas.forEach(function(pessoa, index){
-        if (pessoa.nome == selNome.value){
-            resultado.innerHTML = "O valor do index é " + index
-            contador++
-        }
-    }) 
+    let pessoasMaiusculo = []
+
+    pessoas.forEach(function(item, index){
+        pessoasMaiusculo.push(item.nome.toUpperCase())
+    })
+
+    //Continuar depois
     
-    //Não finalizado
+    resultado.innerHTML = "O(s) valor(es) do índex: "
 
-    if (contador > 1){
-        let vetorMesmoNome = pessoas.filter((selNome.value))
+    let pessoasProcuradas = [] //Guardas os índex
 
-        resultado.innerHTML = "Os valores dos índex são: "
+    pessoasProcuradas = pessoasMaiusculo.filter(function(item, index){
+        if (item.nome == (selNome.value).toUpperCase()){
+            return index
+        }
+    })
 
-        vetorMesmoNome.forEach(function(pessoa, index){
-            resultado.innerHTML += index + " "
-        })
-    }
+    alert(pessoasProcuradas)
 
+
+
+    resultado.innerHTML += pessoasProcuradas
+    
     selNome.value = ""
 })
 
