@@ -12,7 +12,6 @@ enviar.addEventListener("click", ()=>{
 
     selNome.value = ""
     selIdade.value = ""
-    selSexo.value = ""
 })
 
 let remover = document.getElementById("remove")
@@ -57,24 +56,14 @@ mostrarPeloNome.addEventListener("click", ()=>{
     pessoas.forEach(function(item, index){
         pessoasMaiusculo.push(item.nome.toUpperCase())
     })
-
-    //Continuar depois
     
     resultado.innerHTML = "O(s) valor(es) do índex: "
 
-    let pessoasProcuradas = [] //Guardas os índex
-
-    pessoasProcuradas = pessoasMaiusculo.filter(function(item, index){
-        if (item.nome == (selNome.value).toUpperCase()){
-            return index
+    pessoasMaiusculo.forEach(function(nome, index){
+        if (nome == ((selNome.value).toUpperCase())){
+            resultado.innerHTML += index + "  "
         }
     })
-
-    alert(pessoasProcuradas)
-
-
-
-    resultado.innerHTML += pessoasProcuradas
     
     selNome.value = ""
 })
